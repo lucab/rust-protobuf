@@ -27,6 +27,11 @@ pub use error::ProtobufError;
 pub mod descriptor;
 pub mod plugin;
 
+// protobuf common modules
+#[path="../common/clear.rs"]
+pub mod clear;
+
+// protobuf v2 specific modules
 pub mod core;
 pub mod rt;
 pub mod lazy;
@@ -35,7 +40,6 @@ pub mod codegen;
 pub mod compiler_plugin;
 pub mod repeated;
 pub mod singular;
-pub mod clear;
 pub mod reflect;
 pub mod text_format;
 pub mod stream;
