@@ -3,13 +3,16 @@ name = "rust-protobuf-perftest"
 version = "0.0.0"
 authors = ["Stepan Koltsov <stepan.koltsov@gmail.com>"]
 
-[dependencies.protobuf]
-path = "../.."
+[features]
+default = ["protobuf"]
+pb = ["protobuf"]
+pb3 = ["protobuf3"]
 
-[dependencies.time]
-git = "http://github.com/rust-lang/time"
-
-[dependencies.rand]
+[dependencies]
+protobuf = { path = "../lib/protobuf", optional = true }
+protobuf3 = { path = "../lib/protobuf3", optional = true }
+rand = "0.3.14"
+time = "0.1.35"
 
 [[bin]]
 
